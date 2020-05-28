@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+
+
+<ng-container *ngIf="user">
+  <img [src]="user.image" [alt]="user.name">
+  <p>Nombre: {{user.name}}</p>
+  <p>Localidad: {{user.location.name}}</p>
+</ng-container>
+
+
+<div *ngFor="let user of users">
+  <app-user [user]="user" (emitUser)="assignUser($event)"></app-user>
+</div>

@@ -1,0 +1,11 @@
+
+
+<div (click)="clickUser()">
+  <img [src]="user.image" [alt]="user.name">
+  <p>Nombre: {{user.name}}</p>
+  <p>Localidad: {{location}}</p>
+</div>
+
+<input ngModel [(ngModel)]="location" placeholder="Cambia la localidad del personaje" />
+
+<button (click)="resetLocation()">Limpiar</button>
